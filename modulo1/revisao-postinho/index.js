@@ -40,33 +40,56 @@ console.log(verificaSeEMaior(321, 2156));
 
 // Exercício 3------------------------------------------------------------------------------------
 
-const cadastro = (nomeDoUsuario,anoDeNascimento,senhaDoUsuario,nacionalidae) => {
+const cadastro = (nomeDoUsuario,anoDeNascimento,senhaDoUsuario,nacionalidade) => {
     const usuario = []
     //  Sua lógica aqui
-console.log(usuario);
+ if (anoDeNascimento < 2003 && senhaDoUsuario.length > 6 && nacionalidade === "brasileiro") {
+     usuario.push(nomeDoUsuario)
+     usuario.push(nacionalidade)
+     usuario.push(senhaDoUsuario)
+     usuario.push(nacionalidade)
+    }
+return usuario
     
 }
-console.log(cadastro());
+console.log(cadastro("douglas", 2002, "xanzinn","brasileiro"));
 
 // Exercício 4-----------------------------------------------------------------------------------------------
 
-const login = () => {
+const login = (senha1) => {
     const login = "labenu"
     //  Sua lógica aqui
-
+if (senha1 === login) {
+    return "Usuario logado"   
+}else{
+    return "Senha invalida"
+}
 }
 
-console.log(login());
+console.log(login("labenu"));
 
 // Exercício 5----------------------------------------------------------------------------------------------------
 
-const primeiraDose = () => {
-
+const primeiraDose = (nomeDoUsuario1,vacina) => {
+let tempo 
+let data
     //  Sua lógica aqui
-
+if (vacina === "Coronavac") {
+    tempo = 28 
+    data = "20/06"
+    return `Olá ${nomeDoUsuario1}! A próxima dose da ${vacina} é daqui a ${tempo} dias. Compareça no posto na data ${data}.`
+}else if (vacina === "Astrazenica"){
+    tempo = 90
+    data = "23/08"
+    return `Olá ${nomeDoUsuario1}! A próxima dose da ${vacina} é daqui a ${tempo} dias. Compareça no posto na data ${data}.`
+}else{
+    tempo = 90
+    data = "23/08"
+    return `Olá ${nomeDoUsuario1}! A próxima dose da ${vacina} é daqui a ${tempo} dias. Compareça no posto na data ${data}.`
+}
 
 }
-console.log(primeiraDose())
+console.log(primeiraDose("Xan", "Coronavac"))
 
 
 // LOOP+CONDICIONAL
@@ -81,8 +104,13 @@ const segundaDose = (nomeDoUsuario) => {
     ]
 
     //  Sua lógica aqui
-
-
+const usuariosImunizados = usuarios.map((item)=>{
+ if (nomeDoUsuario === item.nome) {
+     item.imunizacao = "completo"
+ }
+ return item
+})
+return usuariosImunizados
 }
 console.log(segundaDose("Barbara"));
 
@@ -94,7 +122,12 @@ const avisoAosAtrasados = () => {
         { nome: "Barbara", imunizacao: "completa" },
         { nome: "Carlos", imunizacao: "incompleta" }
     ]
-
+ 
+    usuarios.forEach((item1)=>{
+      if (item1.imunizacao === "incompleta") {
+        console.log(`Olá ${item1.nome}! Sua imunização está ${item1.imunizacao}, por favor volte ao postinho para tomar a segunda dose.`); 
+      }
+    })
     //  Sua lógica aqui
     }
 
