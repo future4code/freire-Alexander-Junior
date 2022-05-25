@@ -1,0 +1,59 @@
+.Titulo{
+    color: yellow;
+    background-color: black ;
+    margin:2vw;
+    padding: 8vw;
+ }
+html{
+    background-color: blue;
+}
+nav{
+    background-color: black;
+}
+
+a{
+   display: inline;
+    color: yellow;
+}
+footer{
+    margin: 2vw;
+    padding: 5vw ;
+    background-color: brown;
+}
+.chamada {
+    background-color: cornsilk;
+}
+span{
+    color: white;
+    margin: 5%;
+    padding: 8%;
+}
+  
+.foto1{
+    border: black;
+    margin-right: 50vw;
+    padding: 3vw;
+}
+.foto2{
+    margin: 3vw;
+    padding: 3vw;
+}
+table{
+    display: block;
+    margin: 1%;
+    background-color: brown;
+}
+h2{
+    background-color: aliceblue;
+}
+ul{
+    background-color: brown;
+}
+label{
+    background-color: brown;
+   margin: 8px;
+   padding: 8vw;
+}
+.rede{
+       background-color: brown;
+}
