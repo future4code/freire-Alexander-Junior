@@ -70,7 +70,13 @@ div img {
   *
   **/
 
+h3,p,ol{
+  position: relative;
+  top: 80px;  
+    
+}
 #container-de-descricao {
+    
     background-color: #2274a5;
     color: white;
 }
