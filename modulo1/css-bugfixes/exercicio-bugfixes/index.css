@@ -5,6 +5,7 @@
   **/
 
 * {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -19,6 +20,10 @@ h2 {
 input {
     height: 20px;
     width: 500px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px solid black;
 }
 
 button:focus {
@@ -82,6 +87,8 @@ h3,p,ol{
     color: white;
 }
 
+
+
 #container-de-descricao>ol {
     
     padding: 15px 0px;
@@ -125,6 +132,10 @@ td button{
     height: 25px;
     border-radius: 5px;
     color: black;
+
+}
+td button:hover{
+    background-color:#b39d3e ;
 }
 
 .container-do-search {
@@ -141,7 +152,7 @@ td button{
     border-radius: 5px;
     font-size: 10px;
     color: black;
-    
+    margin: 0 auto;
 }
 
 #back-button:hover {
