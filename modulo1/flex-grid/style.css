@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+img{
+    height: 3vh;
+}
+div{
+    background-color: mediumvioletred;
+}
+div{
+    display: flex;
+    justify-content: space-between;
+ }
